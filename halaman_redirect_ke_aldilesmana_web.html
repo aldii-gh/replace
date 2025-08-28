@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kami Pindah Domain – al dilesmana.web.id</title>
+  <meta name="description" content="Domain kami sudah pindah ke aldilesmana.web.id. Klik tombol untuk menuju situs baru." />
+  <meta name="robots" content="noindex, follow" />
+  <!-- Open Graph (opsional) -->
+  <meta property="og:title" content="Kami Pindah Domain" />
+  <meta property="og:description" content="Domain kami pindah ke aldilesmana.web.id." />
+  <meta property="og:url" content="https://aldilesmana.web.id" />
+  <meta property="og:type" content="website" />
+  <style>
+    :root{
+      --bg-1:#0b0f17;
+      --bg-2:#0f172a;
+      --card:#0b1220cc;
+      --txt:#e5e7eb;
+      --muted:#94a3b8;
+      --accent:#60a5fa;
+      --accent-2:#a78bfa;
+      --radius:24px;
+      --blur:14px;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body{
+      margin:0;
+      color:var(--txt);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: radial-gradient(1200px 800px at 20% 10%, #1d2a4a88 0%, transparent 60%),
+                  radial-gradient(1000px 700px at 80% 90%, #3a1d6e55 0%, transparent 60%),
+                  linear-gradient(135deg, var(--bg-1), var(--bg-2));
+      min-height:100%;
+      display:grid;
+      place-items:center;
+      overflow:hidden;
+    }
+
+    /* Partikel lembut */
+    .sparkle{ position:absolute; inset:0; pointer-events:none; }
+    .sparkle span{
+      position:absolute; width:2px; height:2px; border-radius:999px; background:#ffffff33; filter:blur(0.5px);
+      animation: float 12s linear infinite;
+    }
+    @keyframes float{
+      from{ transform: translate3d(var(--x), 110vh, 0) scale(var(--s)); opacity:0; }
+      10%{opacity:.8}
+      to{ transform: translate3d(calc(var(--x) + 2vw), -10vh, 0) scale(var(--s)); opacity:0; }
+    }
+
+    .wrap{ width:min(720px, 92vw); padding:24px; }
+
+    .card{
+      position:relative;
+      background:linear-gradient(180deg, #0b1220ee, #0b1220cc);
+      border:1px solid #ffffff12;
+      border-radius: var(--radius);
+      box-shadow: 0 20px 60px #0008, inset 0 0 0 1px #ffffff08;
+      backdrop-filter: blur(var(--blur));
+      padding: clamp(20px, 4vw, 40px);
+      overflow:hidden;
+      isolation:isolate;
+    }
+
+    .glow-ring{
+      position:absolute; inset:-40%; z-index:-1; filter: blur(50px); opacity:.6;
+      background: conic-gradient(from 0deg, #5eead4, #60a5fa, #a78bfa, #f472b6, #5eead4);
+      animation: spin 16s linear infinite;
+    }
+    @keyframes spin{ to{ transform: rotate(1turn); } }
+
+    h1{
+      margin:0 0 8px; font-weight:800; letter-spacing:0.2px; line-height:1.1;
+      font-size: clamp(28px, 5vw, 44px);
+      background: linear-gradient(90deg, #e5e7eb, #c7d2fe, #a5b4fc);
+      -webkit-background-clip:text; background-clip:text; color:transparent;
+    }
+    p{ margin:0; color:var(--muted); font-size: clamp(14px, 2.2vw, 16px); }
+
+    .actions{ display:flex; gap:12px; flex-wrap:wrap; margin-top:22px; }
+
+    .btn{
+      --shadow: 0 10px 30px rgba(99,102,241,.25), 0 0 0 1px #ffffff1a;
+      appearance:none; cursor:pointer; border:0; outline:0; position:relative;
+      padding:14px 20px; border-radius: 999px; font-weight:700; letter-spacing:.3px;
+      background: radial-gradient(120% 160% at 0% 0%, #312e81 0%, #1e293b 40%, #111827 100%);
+      color:#e2e8f0; box-shadow: var(--shadow);
+      transition: transform .2s ease, box-shadow .2s ease, filter .2s ease; will-change: transform;
+    }
+    .btn:hover{ transform: translateY(-2px); box-shadow: 0 16px 40px rgba(99,102,241,.35), 0 0 0 1px #a78bfa55; }
+    .btn:active{ transform: translateY(0); }
+    .btn:focus-visible{ outline: 3px solid #a78bfa80; outline-offset: 2px; }
+
+    .btn .glow{
+      position:absolute; inset:-2px; border-radius:inherit; filter: blur(10px); opacity:.9; z-index:-1;
+      background: radial-gradient(60% 120% at 50% 0%, #60a5fa88 0%, transparent 60%),
+                  radial-gradient(60% 120% at 50% 100%, #a78bfa66 0%, transparent 60%),
+                  linear-gradient(90deg, #60a5fa66, #a78bfa66);
+      animation: pulse 2.8s ease-in-out infinite;
+    }
+    @keyframes pulse{ 50%{ opacity:.4; filter: blur(18px); } }
+
+    .btn.secondary{
+      background: #0b1220; color:#cbd5e1; border:1px solid #ffffff18;
+    }
+
+    .meta{ margin-top:14px; display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+    .badge{
+      font-size:12px; padding:8px 12px; border-radius:999px; color:#c7d2fe; background:#312e8122; border:1px solid #6366f150;
+    }
+    .countdown{ color:#93c5fd; font-variant-numeric: tabular-nums; }
+
+    footer{ margin-top:28px; color:#64748b; font-size:12px; text-align:center; }
+
+    /* Hormati preferensi gerak */
+    @media (prefers-reduced-motion: reduce){
+      .glow-ring, .btn .glow, .sparkle span{ animation: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="sparkle" aria-hidden="true"></div>
+  <main class="wrap">
+    <section class="card" role="region" aria-labelledby="title">
+      <div class="glow-ring" aria-hidden="true"></div>
+      <h1 id="title">Kami sudah pindah rumah 🏡✨</h1>
+      <p>Mulai sekarang, domain resmi kami berada di <strong>aldilesmana.web.id</strong>. Klik tombol di bawah untuk langsung meluncur.</p>
+
+      <div class="actions">
+        <button class="btn" id="goBtn" aria-label="Kunjungi domain baru">
+          <span class="glow"></span>
+          🚀 Kunjungi aldilesmana.web.id
+        </button>
+        <button class="btn secondary" id="copyBtn" aria-label="Salin URL baru">
+          <span class="glow" aria-hidden="true" style="opacity:.35"></span>
+          📋 Salin URL
+        </button>
+      </div>
+
+      <div class="meta">
+        <span class="badge">Redirect otomatis</span>
+        <span class="countdown" id="countdown">Dalam 5 detik…</span>
+      </div>
+
+      <footer>
+        Jika tidak berpindah otomatis, pastikan pop‑up tidak diblokir atau klik tombol di atas.
+      </footer>
+    </section>
+  </main>
+
+  <script>
+    // ====== Konfigurasi ======
+    const NEW_URL = "https://aldilesmana.web.id"; // ganti jika perlu
+    const AUTO_SECONDS = 5; // hitung mundur auto-redirect
+
+    // ====== Interaksi ======
+    const goBtn = document.getElementById('goBtn');
+    const copyBtn = document.getElementById('copyBtn');
+    const cdEl = document.getElementById('countdown');
+    const sparkle = document.querySelector('.sparkle');
+
+    // Buat partikel kecil
+    const makeSparkles = () => {
+      const total = 80;
+      const frag = document.createDocumentFragment();
+      for(let i=0;i<total;i++){
+        const s = document.createElement('span');
+        const x = Math.random()*100; // vw
+        const d = 8 + Math.random()*14; // durasi
+        const size = 0.7 + Math.random()*1.8;
+        s.style.setProperty('--x', x+'vw');
+        s.style.setProperty('--s', size);
+        s.style.left = x+'vw';
+        s.style.animationDuration = d+'s';
+        s.style.animationDelay = (-Math.random()*d)+'s';
+        frag.appendChild(s);
+      }
+      sparkle.appendChild(frag);
+    };
+
+    makeSparkles();
+
+    const openNew = () => {
+      // Gunakan location.replace agar tidak kembali ke halaman lama saat Back
+      window.location.replace(NEW_URL);
+    };
+
+    goBtn.addEventListener('click', openNew);
+
+    copyBtn.addEventListener('click', async () => {
+      try{
+        await navigator.clipboard.writeText(NEW_URL);
+        copyBtn.textContent = '✅ URL Disalin';
+        setTimeout(()=> copyBtn.textContent = '📋 Salin URL', 2000);
+      }catch(err){
+        // fallback
+        const t = document.createElement('textarea');
+        t.value = NEW_URL; document.body.appendChild(t); t.select();
+        document.execCommand('copy'); t.remove();
+        copyBtn.textContent = '✅ URL Disalin';
+        setTimeout(()=> copyBtn.textContent = '📋 Salin URL', 2000);
+      }
+    });
+
+    // Hitung mundur dan otomatis redirect
+    let left = AUTO_SECONDS;
+    const tick = () => {
+      left--; if(left <= 0){ openNew(); return; }
+      cdEl.textContent = `Dalam ${left} detik…`;
+    };
+    cdEl.textContent = `Dalam ${left} detik…`;
+    const iv = setInterval(tick, 1000);
+
+    // Jika user interaksi, kita tetap izinkan auto-redirect berjalan (tidak dibatalkan)
+
+    // Tambahan: jika halaman dibuka di dalam frame, coba keluar ke top-level untuk keamanan
+    if (window.top !== window.self) {
+      try{ window.top.location = window.location; }catch(_){ /* ignore */ }
+    }
+  </script>
+</body>
+</html>
